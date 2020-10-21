@@ -1,0 +1,36 @@
+@import 'global.scss';
+
+:global(.ant-notification) {
+  width: auto;
+}
+
+.notification {
+  background-color: $hooks-notification-bg-color;
+  border-radius: 3px;
+  box-shadow: $hooks-notification-box-shadow;
+  color: $hooks-notification-color;
+  padding: 15px 20px 15px 15px;
+
+  :global(.ant-notification-notice-with-icon) {
+    align-items: center;
+    display: flex;
+  }
+
+  :global(.ant-notification-notice-close) {
+    color: $hooks-notification-close-color;
+  }
+
+  :global(.ant-notification-notice-icon) {
+    font-size: $hooks-notification-icon-font-size;
+  }
+
+  :global(.ant-notification-notice-message) {
+    color: $hooks-notification-messsage-color;
+    font-size: $hooks-notification-messsage-font-size;
+    margin: 0 0 4px 30px;
+  }
+
+  :global(.ant-notification-notice-description) {
+    margin-left: 0;
+  }
+}

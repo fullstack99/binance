@@ -1,0 +1,111 @@
+/* stylelint-disable no-descending-specificity */
+@import 'global.scss';
+
+.historyTableContainer,
+.historyTableContainerNotLogin {
+  :global(.ant-table-content) {
+    max-height: 275px;
+    thead {
+      > tr {
+        > :global(th.ant-table-cell) {
+          padding: 0 0 0 7px;
+          color: $pages-exchange-order-history-table-color;
+          background-color: $pages-exchange-order-history-table-color-bg;
+          font-size: $pages-exchange-order-history-table-font-size;
+          height: 29px;
+          border: 1px solid $pages-exchange-order-history-table-border-color;
+        }
+      }
+    }
+  }
+  :global(.ant-spin-nested-loading) {
+    overflow: scroll;
+  }
+  &NotLogin {
+    :global(.ant-table-tbody) {
+      display: none;
+    }
+  }
+  .alignRight {
+    margin-right: 7px;
+  }
+  &.dark {
+    :global(.ant-table-content) {
+      thead {
+        > tr {
+          > :global(th.ant-table-cell) {
+            padding: 0 0 0 7px;
+            color: $pages-exchange-order-history-table-dark-font-color;
+            background-color: $pages-exchange-order-history-table-dark-table-head-bg;
+            font-size: $pages-exchange-order-history-table-font-size;
+            height: 29px;
+            border: 1px solid $pages-exchange-order-history-table-dark-border;
+          }
+        }
+      }
+      tbody {
+        > tr {
+          background-color: $pages-exchange-order-history-table-dark-bg;
+          &:hover {
+            background-color: $pages-exchange-order-history-table-dark-hover-bg;
+          }
+          > td {
+            background-color: $pages-exchange-order-history-table-dark-bg;
+            color: $pages-exchange-order-history-table-dark-font-color;
+            border-bottom: 1px solid
+              $pages-exchange-order-history-table-dark-border-light;
+            &:nth-child(1) {
+              border-left: 1px solid
+                $pages-exchange-order-history-table-dark-border-light;
+            }
+            &:nth-last-child(1) {
+              border-right: 1px solid
+                $pages-exchange-order-history-table-dark-border-light;
+            }
+          }
+        }
+      }
+    }
+    :global(.ant-pagination-item) {
+      background-color: #333;
+      border: none;
+      > a {
+        color: #c1c1c1;
+      }
+    }
+    :global(.ant-pagination-item-link) {
+      background-color: #333;
+      border: none;
+      > span {
+        color: #c1c1c1;
+      }
+    }
+  }
+}
+
+.cancel {
+  color: $pages-exchange-order-history-table-cancle-button;
+}
+
+.side_buy {
+  color: $pages-exchange-order-history-table-side-buy-button;
+}
+
+.side_sell {
+  color: $pages-exchange-order-history-table-side-sell-button;
+}
+
+.createdTag {
+  background-color: $pages-exchange-order-history-table-color-bg;
+  &.dark {
+    background-color: $pages-exchange-order-history-table-dark-tag-bg;
+  }
+}
+
+.cancelled_row {
+  opacity: 0.6;
+}
+
+.alignRight {
+  margin-right: 7px;
+}

@@ -1,0 +1,47 @@
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  border-image: initial;
+  padding: 0;
+
+  .graphWrapper {
+    width: calc(100% - 2px);
+    height: 100%;
+
+    & > div {
+      height: calc(100% - 26px);
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .selectorWrapper {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(247, 247, 247);
+  }
+
+  .loading {
+    position: absolute;
+    top: 26px;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    &.dark {
+      background: rgba( 28, 28, 28, 0.8);
+    }
+    &.light {
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

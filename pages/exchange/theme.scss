@@ -1,0 +1,312 @@
+@import 'global.scss';
+
+:global {
+  .tabPaneOutter {
+    & > .ant-tabs-bar {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .ant-tabs-tab-active {
+      border-bottom: none;
+    }
+  }
+
+  .tabPaneInner {
+    & > .ant-tabs-bar {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+    .ant-tabs-nav-wrap {
+      margin-bottom: 0;
+
+      .ant-tabs-nav-scroll {
+        padding: 8px 0;
+
+        .ant-tabs-nav {
+          margin-left: 1rem;
+
+          .ant-tabs-tab {
+            border-radius: 20px;
+            padding: 4px 14px;
+            margin: 0 0.5rem 0 0;
+          }
+          .ant-tabs-tab-active {
+            border-radius: 20px;
+            padding: 4px 14px;
+          }
+          .ant-tabs-ink-bar {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    &-focused {
+      border-color: $primary-color !important;
+    }
+  }
+  .ant-radio-wrapper {
+    color: currentColor;
+  }
+  .ant-form-item-label > label {
+    font-size: 12px;
+  }
+
+  .dark {
+    background-color: $exchange-theme-dark-bg-color;
+
+    .textMain {
+      color: $exchange-theme-dark-text-main-color !important;
+    }
+    .textSecondary {
+      color: $exchange-theme-dark-text-secondary-color !important;
+    }
+    .textOther {
+      color: $exchange-theme-dark-text-other-color !important;
+    }
+    .svg {
+      fill: $exchange-theme-dark-text-main-color;
+    }
+    .bordered {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $exchange-theme-dark-border-color;
+    }
+    .lightbg {
+      background-color: $exchange-theme-dark-light-bg-color;
+    }
+    .darkbg {
+      background-color: $exchange-theme-dark-bg-color;
+    }
+    .darkbgSeries {
+      &.active {
+        border-bottom: 1px dashed $exchange-theme-dark-dark-border-color;
+
+        & ~ div {
+          background-color: $exchange-theme-dark-bg-color;
+        }
+      }
+    }
+    .listWrapper {
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $exchange-theme-dark-border-color;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $exchange-theme-dark-border-color;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $exchange-theme-dark-dark-border-color;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $exchange-theme-dark-list-scrollbar-thumb-hover-color;
+      }
+    }
+    .ant-radio-button-wrapper {
+      background: $exchange-theme-dark-bg-color;
+      border: 1px solid $table-action-export-color;
+      color: $exchange-theme-dark-text-main-color;
+      border-radius: 0 !important;
+
+      &::before {
+        display: none;
+      }
+      &-checked {
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+    .tabPaneOutter {
+      & > .ant-tabs-bar {
+        background: $exchange-theme-dark-bg-color;
+        border-bottom: 1px solid $exchange-theme-dark-border-color;
+      }
+    }
+    .tabPaneInner {
+      & > .ant-tabs-bar {
+        border-left: 1px solid $exchange-theme-dark-border-color;
+        border-right: 1px solid $exchange-theme-dark-border-color;
+      }
+    }
+    .leftDivider::after {
+      border-right: 1px solid $exchange-theme-dark-border-color;
+    }
+    .ant-tabs {
+      background: $exchange-theme-dark-light-bg-color;
+
+      &.ant-tabs-card .ant-tabs-card-bar {
+        .ant-tabs-tab {
+          background-color: $exchange-theme-dark-bg-color;
+          margin-right: 0;
+          color: $exchange-theme-dark-text-main-color;
+          border-color: $exchange-theme-dark-border-color;
+          height: 30px;
+          line-height: 30px;
+        }
+        .ant-tabs-tab-active {
+          background-color: $exchange-theme-dark-light-bg-color;
+          border-bottom: 0;
+          margin-right: 0;
+          color: $primary-color;
+        }
+        .ant-tabs-nav-container {
+          height: 30px;
+
+          .ant-tabs-nav-wrap {
+            border-top: 0;
+            border-bottom: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        border: 1px solid $exchange-theme-dark-border-color;
+        background-color: $exchange-theme-dark-bg-color;
+        color: $exchange-theme-dark-text-main-color;
+      }
+      .ant-tabs-tab-active {
+        background-color: transparent;
+        color: $primary-color;
+      }
+    }
+    .ant-form-item-label > label {
+      color: $exchange-theme-dark-text-main-color;
+    }
+    .ant-form-item-control-input-content {
+      & > div {
+        background: $exchange-theme-dark-bg-color;
+        border-color: $exchange-theme-dark-border-color;
+      }
+      input {
+        color: $exchange-theme-dark-text-main-color;
+      }
+    }
+  }
+
+  .light {
+    background-color: $exchange-theme-light-bg-color;
+
+    .textMain {
+      color: $exchange-theme-light-text-main-color !important;
+    }
+    .textSecondary {
+      color: $exchange-theme-light-text-secondary-color !important;
+    }
+    .svg {
+      fill: $exchange-theme-light-text-main-color;
+    }
+    .bordered {
+      border-width: 1px;
+      border-style: solid;
+      border-color: $exchange-theme-light-border-color;
+    }
+    .lightbg {
+      background-color: $exchange-theme-light-light-bg-color;
+    }
+    .darkbg {
+      background-color: $exchange-theme-light-bg-color;
+    }
+    .darkbgSeries {
+      &.active {
+        border-bottom: 1px dashed $exchange-theme-light-dark-border-color;
+
+        & ~ div {
+          background-color: $exchange-theme-light-bg-color;
+        }
+      }
+    }
+    .listWrapper {
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: $exchange-theme-light-list-scrollbar-color;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $exchange-theme-light-list-scrollbar-color;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $exchange-theme-light-list-scrollbar-thumb-color;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $exchange-theme-light-list-scrollbar-thumb-hover-color;
+      }
+    }
+    .ant-radio-button-wrapper {
+      background: $exchange-theme-light-bg-color;
+      border: 1px solid $exchange-theme-light-button-border-color;
+      color: $exchange-theme-light-text-main-color;
+      border-radius: 0 !important;
+
+      &::before {
+        display: none;
+      }
+      &-checked {
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+    .tabPaneOutter {
+      & > .ant-tabs-bar {
+        background: $exchange-theme-light-bg-color;
+        border-bottom: 1px solid $exchange-theme-light-border-color;
+      }
+    }
+    .tabPaneInner {
+      & > .ant-tabs-bar {
+        border-left: 1px solid $exchange-theme-light-border-color;
+        border-right: 1px solid $exchange-theme-light-border-color;
+      }
+    }
+    .leftDivider::after {
+      border-right: 1px solid $exchange-theme-light-border-color;
+    }
+    .ant-tabs {
+      background: $exchange-theme-light-light-bg-color;
+
+      &.ant-tabs-card .ant-tabs-card-bar {
+        .ant-tabs-tab {
+          background-color: $exchange-theme-light-bg-color;
+          margin-right: 0;
+          color: $exchange-theme-light-text-main-color;
+          border-color: $exchange-theme-light-border-color;
+          height: 30px;
+          line-height: 30px;
+        }
+        .ant-tabs-tab-active {
+          background-color: $exchange-theme-light-light-bg-color;
+          border-bottom: 0;
+          margin-right: 0;
+          color: $primary-color;
+        }
+        .ant-tabs-nav-container {
+          height: 30px;
+
+          .ant-tabs-nav-wrap {
+            border-top: 0;
+            border-bottom: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        border: 1px solid $exchange-theme-light-border-color;
+        background-color: $exchange-theme-light-bg-color;
+        color: $exchange-theme-light-text-main-color;
+      }
+      .ant-tabs-tab-active {
+        background-color: transparent;
+        color: $primary-color;
+      }
+    }
+    .ant-form-item-label > label {
+      color: $exchange-theme-light-text-main-color;
+    }
+  }
+}

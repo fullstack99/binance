@@ -1,0 +1,99 @@
+@import 'global.scss';
+
+.message_modal {
+  :global(.ant-modal-content) {
+    background: $hooks-message-modal-bg-color;
+    box-shadow: $hooks-message-modal-box-shadow;
+    padding: 20px 40px;
+
+    @include media('<tablet') {
+      padding: 0;
+    }
+  }
+
+  :global(.ant-modal-close) {
+    display: block;
+
+    svg {
+      fill: $hooks-message-modal-close-icon-fill-color;
+
+      @include media('<tablet') {
+        fill: $hooks-message-modal-close-icon-fill-color-mobile;
+      }
+    }
+  }
+
+  :global(.ant-modal-body) {
+    background: $hooks-message-modal-body-bg-color;
+    border-radius: 4px;
+    box-shadow: $hooks-message-modal-body-box-shadown;
+    padding: 40px 24px;
+  }
+
+  :global(.ant-modal-confirm-body) {
+    text-align: center;
+  }
+
+  :global(.ant-modal-confirm-title) {
+    svg {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  :global(.ant-modal-confirm-content) {
+    color: $hooks-message-modal-confirm-content-color;
+    margin-top: 16px;
+  }
+
+  :global(.ant-modal-confirm-btns) {
+    float: none;
+    margin-top: 32px;
+    width: 100%;
+
+    button {
+      background: $hooks-message-modal-confirm-button-bg-color;
+      border: $hooks-message-modal-confirm-button-border-color;
+      color: $hooks-message-modal-confirm-button-color;
+      font-size: $hooks-message-modal-confirm-button-font-size;
+      font-weight: $hooks-message-modal-confirm-button-font-weight;
+      height: 40px;
+      margin: 0;
+      padding: 4px 8px;
+      width: 100%;
+      box-shadow: none;
+    }
+  }
+}
+
+.cofirmation_modal {
+  :global(.ant-modal-confirm-btns) {
+    align-items: center;
+    display: flex;
+    float: none;
+    justify-content: space-between;
+    margin-top: 32px;
+    width: 100%;
+
+    button {
+      background: $hooks-confirmation-modal-button-bg-color;
+      border: 1px solid $hooks-confirmation-modal-button-border-color;
+      font-size: $hooks-confirmation-modal-button-font-size;
+      font-weight: $hooks-confirmation-modal-button-font-weight;
+      height: 40px;
+      margin: 0;
+      padding: 4px 8px;
+      width: 160px;
+      box-shadow: none;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    :global(.ant-btn-primary) {
+      background: $hooks-confirmation-modal-primary-button-bg-color;
+      border: $hooks-confirmation-modal-primary-button-border-color;
+      box-shadow: none;
+    }
+  }
+}

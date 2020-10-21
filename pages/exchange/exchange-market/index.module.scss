@@ -1,0 +1,326 @@
+/* stylelint-disable no-descending-specificity */
+@import 'global.scss';
+
+.tooltipCustom {
+  :global(.ant-tooltip-inner) {
+    min-width: 100px !important;
+    height: 100px !important;
+    background-color: rgba(38, 38, 38, 0.9);
+    color: #d4d4d4;
+  }
+  :global(.ant-tooltip-arrow::before) {
+    background-color: rgba(38, 38, 38, 0.9);
+  }
+  &.dark {
+    :global(.ant-tooltip-inner) {
+      min-width: 100px !important;
+      background-color: #616161;
+      color: #d4d4d4;
+    }
+    :global(.ant-tooltip-arrow::before) {
+      background-color: #616161;
+    }
+  }
+}
+
+.tooltips {
+  .container {
+    padding: 0.5rem;
+    .row {
+      border-bottom: 1px solid $pages-exchange-market-container-border-color;
+      .link {
+        font-size: $pages-exchange-market-link-font-size;
+      }
+    }
+    .fee {
+      font-size: $pages-exchange-market-fee-font-size;
+      .bold {
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.calContainer {
+  width: 100%;
+  padding: 5px;
+  position: relative;
+  font-family: $pages-exchange-market-font-family;
+  :global(.ant-form-item-label > label) {
+    color: $pages-exchange-market-label-color;
+  }
+  :global(.ant-tabs-bar) {
+    margin-bottom: 8px;
+  }
+  :global(.ant-tabs-nav-scroll) {
+    background-color: $pages-exchange-market-tab-scroll-bg-color;
+  }
+  .calIcon {
+    position: absolute;
+    cursor: pointer;
+    width: 16px;
+    right: 16px;
+    top: 10px;
+    z-index: 99;
+    > .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.comingsoon {
+  &Container {
+    padding: 2rem;
+  }
+  &Pic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding-right: 10px;
+  }
+  &Content {
+    h3 {
+      color: $pages-exchange-market-comingsoon-title-color;
+      font-size: $pages-exchange-market-comingsoon-title-size;
+    }
+  }
+}
+
+.exchangeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.limitorder {
+  min-width: 321px;
+  padding: 0 1rem;
+
+  .anticon {
+    margin-right: 5px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    &Title {
+      font-family: $pages-exchange-market-header-font-family;
+      margin-bottom: 0;
+      font-weight: $pages-exchange-market-header-font-weight;
+    }
+    &Wallet {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  &Col {
+    padding: 0 1rem;
+    &.left {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-right: 1px solid $pages-exchange-market-column-border-color;
+        min-height: 320px;
+      }
+    }
+  }
+}
+
+.form {
+  :global(.ant-form-item-control-input) {
+    min-height: unset;
+  }
+  &Item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    position: relative;
+    height: 30px !important;
+    :global {
+      .ant-form-item-label > label.ant-form-item-required::before {
+        content: '' !important;
+        margin-right: 0;
+      }
+      .ant-input-number {
+        height: 25px !important;
+        width: 264px !important;
+        position: relative;
+        border-radius: 0;
+        &-input-wrap {
+          > input.ant-input-number-input {
+            height: 25px !important;
+          }
+        }
+        &.ant-input-number-focused,
+        &:hover {
+          .ant-input-number-handler-wrap {
+            display: flex;
+          }
+        }
+        .ant-input-number-handler-wrap {
+          opacity: 1;
+          top: 12%;
+          width: 8px;
+          height: 18px;
+          right: 5px;
+          border: 1px solid $pages-exchange-market-input-border-color;
+          border-radius: 5px;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          display: none;
+          svg {
+            width: 4px;
+          }
+          .ant-input-number-handler-down-inner {
+            width: 4px;
+          }
+          .ant-input-number-handler {
+            width: auto;
+            height: 6px;
+            &-up-inner,
+            &-down-inner {
+              position: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.customPlaceholder {
+  font-size: $pages-exchange-market-input-placeholder-size;
+  color: $pages-exchange-market-input-placeholder-color;
+  right: 6%;
+  position: absolute;
+  top: 3px;
+  z-index: 1;
+  &Wrapper {
+    position: relative;
+  }
+}
+
+.caltradeSubmitBuy {
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 0;
+  background-color: $pages-exchange-market-submit-buy-color-bg;
+  color: $pages-exchange-market-submit-buy-color;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background-color: $pages-exchange-market-submit-buy-color-bg;
+  }
+}
+
+.caltradeSubmitSell {
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 0;
+  background-color: $pages-exchange-market-submit-sell-color-bg;
+  color: $pages-exchange-market-submit-sell-color;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background-color: $pages-exchange-market-submit-sell-color-bg;
+  }
+}
+
+.tradeOptionWrapper {
+  display: flex;
+  justify-content: flex-end;
+  background: transparent !important;
+
+  .ButtonOption {
+    border: 1px solid $pages-exchange-market-trade-option-border-color;
+    height: 25px;
+    padding: 0 15px;
+    margin-right: 6px;
+    line-height: $pages-exchange-market-trade-option-line-height;
+    border-radius: $pages-exchange-market-trade-option-border-radius;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.maxAmountContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.maxAmount {
+  width: 264px;
+  font-size: $pages-exchange-market-max-amount-font-size;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 12px;
+  margin-bottom: 5px;
+  background-color: $pages-exchange-market-max-amount-bg-color;
+  color: $pages-exchange-market-max-amount-color;
+  height: 25px;
+  &Hide {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.loginRegister {
+  &Button {
+    text-align: center;
+    border: 1px solid $pages-exchange-market-login-button-border-color;
+    height: 34px;
+    line-height: $pages-exchange-market-login-button-line-height;
+    margin-top: 2rem;
+  }
+  &Link {
+    font-weight: $pages-exchange-market-login-button-font-weight;
+    color: $pages-exchange-market-login-button-font;
+  }
+}
+
+.totalInfoWrapper {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  .totalInfo {
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 2px;
+  }
+}
+.totalTooltipCustom {
+  .bold {
+    font-weight: 900;
+  }
+  :global(.ant-tooltip-inner) {
+    width: 285px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(38, 38, 38, 0.9);
+    color: #d4d4d4;
+  }
+  :global(.ant-tooltip-arrow::before) {
+    background-color: rgba(38, 38, 38, 0.9);
+  }
+  &.dark {
+    :global(.ant-tooltip-inner) {
+      background-color: #616161;
+      color: #d4d4d4;
+    }
+    :global(.ant-tooltip-arrow::before) {
+      background-color: #616161;
+    }
+  }
+}

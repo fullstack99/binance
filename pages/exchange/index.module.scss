@@ -1,0 +1,138 @@
+@import './theme.scss';
+
+.root {
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+
+  .mainContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 1200px;
+    margin: auto;
+
+    .leftContainer {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: hidden;
+
+      .headerContainer {
+        flex: 0 1 60px;
+      }
+      .infoContainer {
+        display: flex;
+        flex: 1;
+      }
+      .orderbookContainer {
+        flex: 0 1 280px;
+        font-size: 12px;
+        display: flex;
+        height: 860px;
+      }
+      .exchangeContainer {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+        overflow: hidden;
+
+        .graphContainer {
+          flex: 1;
+          min-height: 500px;
+          overflow: hidden;
+          padding: 5px;
+        }
+        .exchangeMarketContainer {
+          flex: 1;
+          min-height: 274px;
+          height: 370px;
+        }
+      }
+    }
+
+    .rightContainer {
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      margin: 5px 5px 0 5px;
+      flex: none;
+
+      .tradeHistory {
+        flex: 1;
+      }
+    }
+  }
+  .bottomContainer {
+    width: 100%;
+    max-width: 1400px;
+    min-width: 1200px;
+    margin: auto;
+    .openOrder {
+      flex: 1;
+      margin-top: 1rem;
+      &Header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #aaa;
+      }
+      &Title {
+        font-size: 14px;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+      &ShowMore {
+        text-decoration: underline;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+      &Refresh {
+        text-decoration: underline;
+        margin-right: 10px;
+        color: #212833;
+        cursor: pointer;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+    }
+    .orderHistory {
+      &Header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #aaa;
+      }
+      &Title {
+        font-size: 14px;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+      &ShowMore {
+        text-decoration: underline;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+      &Refresh {
+        text-decoration: underline;
+        margin-right: 10px;
+        color: #212833;
+        cursor: pointer;
+        &.dark {
+          color: #c1c1c1;
+        }
+      }
+
+      flex: 1;
+      margin-top: 2rem;
+    }
+  }
+}

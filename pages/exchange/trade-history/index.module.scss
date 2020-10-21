@@ -1,0 +1,58 @@
+/* stylelint-disable no-descending-specificity */
+@import 'global.scss';
+
+.tradeHistory {
+  width: 100%;
+
+  .title {
+    font-size: $pages-exchange-trade-history-font-size;
+    margin-bottom: 0;
+    user-select: none;
+    font-weight: $pages-exchange-trade-history-font-weight;
+    padding: 5px;
+  }
+  .history {
+    &Panel {
+      height: 483px;
+      overflow: hidden;
+    }
+    &Table {
+      font-size: $pages-exchange-trade-history-table-font-size;
+      padding: 0 5px;
+
+      .price {
+        color: $pages-exchange-trade-history-price-up-color;
+        flex: 1 1 40px;
+
+        &.isBuyer {
+          color: $pages-exchange-trade-history-price-down-color;
+        }
+      }
+      .quantity {
+        flex: 1 1 20px;
+        text-align: right;
+      }
+      .time {
+        flex: 1 1 30px;
+        color: $pages-exchange-trade-history-time-color;
+        text-align: right;
+      }
+    }
+  }
+  .loading {
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+
+    &.dark {
+      background: $pages-exchange-trade-history-dark-bg;
+      &.light {
+        background: $pages-exchange-trade-history-light-bg;
+      }
+    }
+  }
+}

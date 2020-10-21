@@ -1,0 +1,95 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5px;
+
+    .title {
+      color: rgb(153, 153, 153);
+    }
+    .price {
+      span {
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+        margin-right: 5px;
+
+        &.up {
+          color: #89b72d;
+        }
+
+        &.down {
+          color: #ea1070;
+        }
+      }
+    }
+  }
+
+  .mainVolume {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+  }
+
+  .info {
+    a {
+      color: rgb(51, 51, 51);
+      outline: none;
+      text-decoration: none;
+      font-size: 0.75em;
+    }
+
+    svg {
+      fill: #66b5f8;
+      width: 13px;
+      height: 12px;
+      margin-right: 5px;
+
+      &::before {
+        content: '\E65E';
+      }
+    }
+  }
+
+  .hot {
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #3983fa;
+    border: 1px solid #3983fa;
+    margin-left: 5px;
+  }
+
+  .themeBtnGroup {
+    margin-top: -16px;
+
+    label {
+      background: transparent;
+      padding: 0 4px;
+
+      svg g {
+        fill: rgb(153, 153, 153);
+      }
+
+      &.active {
+        &.light {
+          background: #f7f7f7;
+          border-color: #e6e6e6;
+        }
+        &.dark {
+          background: #333;
+          border-color: #323232;
+        }
+
+        svg g {
+          fill: #66b5f8;
+        }
+      }
+    }
+  }
+}
